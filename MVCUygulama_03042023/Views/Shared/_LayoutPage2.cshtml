@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="block">
+    <p>Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.</p>
+    <p>Ut fusce varius nisl ac ipsum gravida vel pretium tellus.</p>
+</div>
+<div class="block">
+    @RenderBody()
+</div>
+<div class="block">
+    <p>Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.</p>
+    <p>Ut fusce varius nisl ac ipsum gravida vel pretium tellus.</p>
+</div>
+
+@section linkler{
+    @RenderSection("section1",false)
+    }

@@ -1,0 +1,45 @@
+﻿@using MVCUygulamaModelBinding.Models.ViewModels
+@model IndexViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HomePage</title>
+</head>
+<body>
+    <div>
+        <b>Ad:</b>@Model.KisiTanim.Ad
+        <br />
+        <b>Soyad:</b>@Model.KisiTanim.Soyad
+        <br />
+        <b>Yaş:</b>@Model.KisiTanim.Yas
+        <br />
+        <b>Adres:</b>@Model.KisiAdres.AdresTanim
+        <br />
+        <b>Şehir:</b>@Model.KisiAdres.Sehir
+    </div>
+    <hr />
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(x => x.KisiTanim.ID)
+            <b>Ad:</b>@Html.TextBoxFor(x => x.KisiTanim.Ad) <br />
+            <b>Soyad:</b>@Html.TextBoxFor(x => x.KisiTanim.Soyad)
+            <br />
+            <b>Yaş:</b>@Html.TextBoxFor(x => x.KisiTanim.Yas)
+            <br />
+            <b>Adres:</b>@Html.TextBoxFor(x => x.KisiAdres.AdresTanim)
+            <br />
+            <b>Şehir:</b>@Html.TextBoxFor(x => x.KisiAdres.Sehir)
+            <br />
+            <hr />
+            <input type="submit" value="Gönder" />
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Anasayfaya  Hoşgeldiniz</h2>
+
+<p> Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.</p>
+<p> Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.</p>
+<p> Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.</p>
+
+<hr />
+<h4>Faydalı linkler</h4>
+@*@Html.Partial("_PartialFaydalıLinkler")*@
+
+@{ 
+    Html.RenderPartial("_PartialFaydalıLinkler");
+}
+
+@section linkler{
+    <ul>
+        <li>
+           @Html.ActionLink("Blog Sayfası","blog")
+        </li>
+    </ul>
+    } 
+
+@section footer{
+    <p> Sayfa sonu </p>
+    }

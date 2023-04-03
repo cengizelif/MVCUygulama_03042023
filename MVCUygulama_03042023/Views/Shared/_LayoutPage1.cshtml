@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <style>
+        .block{
+            display:block;
+            margin:10px;
+            border:2px solid #000000;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">
+        @RenderSection("linkler",false)
+    </div>
+    <div  class="block">
+        @RenderBody()
+    </div>
+    <div class="block">
+        @RenderSection("footer", false)
+
+        <hr />
+        <h4>Faydalı linkler</h4>
+        @Html.Partial("../Home/_PartialFaydalıLinkler")
+    </div>
+</body>
+</html>
